@@ -1,8 +1,8 @@
 <view class="login-container">
 	<view class="login" wx:if="{{ !logged }}">
 		<view class="app-info">
-			<image class="app-logo" src="http://placekitten.com/64/64" />
-			<text class="app-name">小商城测试</text>
+			<image class="app-logo" src="../../assets/images/2107_logo_64*64.png" />
+			<text class="app-name">宇宙中心需要您的授权</text>
 		</view>
 		<view class="alert">
 			<view class="alert-title">网页由该小程序开发，请确认授权以下信息</view>
@@ -14,7 +14,7 @@
 	</view>
 	<view class="logged" wx:else>
 		<image class="logged-icon" src="../../assets/images/iconfont-weixin.png" />
-		<view class="logged-text">近期你已经授权登陆过小商城测试</view>
+		<view class="logged-text">近期你已经授权登陆过2107</view>
 		<view class="logged-text">自动登录中</view>
 	</view>
 </view>

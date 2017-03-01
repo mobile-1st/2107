@@ -34,7 +34,7 @@
 }
 
 .app-info .app-name {
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 18px;
 	color: #000;
 }
