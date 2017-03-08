@@ -57,13 +57,9 @@ Page({
         })
     },
     getClassify() {
-        // App.HttpService.getClassify({
-        //     page: 1, 
-        //     limit: 4, 
-        // })
         this.classify.queryAsync({
-            page: 1, 
-            limit: 4, 
+            page: 1,
+            limit: 4,
         })
         .then(data => {
             console.log(data)
@@ -98,7 +94,7 @@ Page({
         })
     },
     onPullDownRefresh() {
-        const type = this.data.goods.params.type    
+        const type = this.data.goods.params.type
         const goods = {
             items: [],
             params: {

@@ -1,15 +1,16 @@
 <view class="about">
 	<view class="about-item">
-		<text class="about-item-title">关于项目</text>
-		<text class="about-item-content">微信小程序-小商城前台（实现一个移动端小商城，项目持续更新中...）</text>
+		<text class="about-item-title">关于我们</text>
+		<text class="about-item-content">我们致力于让租客省心，业主放心。构建美好居住环境，让家更温馨！</text>
 	</view>
 	<view class="about-item">
-		<text class="about-item-title">源码地址</text>
-		<text class="about-item-content link">https://github.com/skyvow/m-mall</text>
-		<text class="about-item-content link">https://github.com/skyvow/m-mall-admin</text>
+		<text class="about-item-title">官网</text>
+		<text class="about-item-content link">http://www.sunzhongmou.com/</text>
+		<text class="about-item-title">博客</text>
+		<text class="about-item-content link">http://blog.sunzhongmou.com/</text>
 	</view>
 	<view class="about-item">
 		<text class="about-item-title">当前版本</text>
-		<text class="about-item-content ">v0.0.3 Beta</text>
+		<text class="about-item-content ">v0.1.0 Beta</text>
 	</view>
 </view>

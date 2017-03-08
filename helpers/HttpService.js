@@ -5,17 +5,22 @@ class Service extends ServiceBase {
 		super()
 		this.$$prefix = ''
 		this.$$path = {
+			getToken    : '/user/get-wx-token',
 			wechatSignUp: '/user/wechat/sign/up',
 			wechatSignIn: '/user/wechat/sign/in',
 			signIn      : '/user/sign/in',
-			banner      : '/banner', 
-			classify    : '/classify', 
-			goods       : '/goods', 
-			search      : '/goods/search/all', 
-			cart        : '/cart', 
-			address     : '/address', 
-			order       : '/order', 
-        }
+			banner      : '/banner',
+			classify    : '/classify',
+			goods       : '/goods',
+			search      : '/goods/search/all',
+			cart        : '/cart',
+			address     : '/address',
+			order       : '/order',
+		}
+	}
+
+	getToken(params) {
+		return this.postRequest(this.$$path.getToken, params)
 	}
 
 	wechatSignUp(params) {
@@ -25,9 +30,9 @@ class Service extends ServiceBase {
 	wechatSignIn(params) {
 		return this.postRequest(this.$$path.wechatSignIn, params)
 	}
-	
+
 	signIn(params) {
-		return this.postRequest(this.$$path.signIn, params) 
+		return this.postRequest(this.$$path.signIn, params)
 	}
 
 	getBanners(params) {
@@ -56,7 +61,7 @@ class Service extends ServiceBase {
 
 	addCartByUser(goods) {
 		return this.postRequest(this.$$path.cart, {
-			goods: goods, 
+			goods: goods,
 		})
 	}
 

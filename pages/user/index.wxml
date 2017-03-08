@@ -11,7 +11,7 @@
                 </view>
                 <view class="weui-cell__bd">{{ item.text }}</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access">
-                	<text wx:if="{{ index === 2 }}">{{ item.path }}</text>
+                	<text wx:if="{{ index === 0 }}">{{ item.path }}</text>
                 </view>
             </navigator>
         </view>
