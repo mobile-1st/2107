@@ -2,6 +2,9 @@ const App = getApp()
 
 Page({
     data: {
+        images: [{'path': 'https://source.sunzhongmou.com/191054/images/IMG_1116.JPG'},
+            {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG'},
+            {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1118.JPG'}],
         activeIndex: 0,
         navList: [],
         indicatorDots: !0,
@@ -13,7 +16,7 @@ Page({
         goods: {
             items: [],
             params: {
-                page : 1,
+                page: 1,
                 limit: 10,
             },
             paginate: {}
@@ -23,7 +26,7 @@ Page({
         },
     },
     swiperchange(e) {
-        // console.log(e.detail.current)
+        console.log(e.detail.current)
     },
     onLoad() {
         this.banner = App.HttpResource('/banner/:id', {id: '@id'})
@@ -44,33 +47,34 @@ Page({
         App.WxService.navigateTo('/pages/search/index')
     },
     getBanners() {
-    	// App.HttpService.getBanners({is_show: !0})
+        // App.HttpService.getBanners({is_show: !0})
         this.banner.queryAsync({is_show: !0})
-        .then(data => {
-        	console.log(data)
-        	if (data.meta.code == 0) {
-                data.data.items.forEach(n => n.path = App.renderImage(n.images[0].path))
-        		this.setData({
-                    images: data.data.items
-                })
-        	}
-        })
+            .then(data => {
+                console.log(data)
+                if (data.meta.code == 0) {
+                    data.data.items.forEach(n => n.path = App.renderImage(n.images[0].path))
+                    this.setData({
+                        images: data.data.items
+                    })
+                }
+            })
     },
     getClassify() {
         this.classify.queryAsync({
+            id: 321,
             page: 1,
             limit: 4,
         })
-        .then(data => {
-            console.log(data)
-            if (data.meta.code == 0) {
-                this.setData({
-                    navList: data.data.items,
-                    'goods.params.type': data.data.items[0]._id
-                })
-                this.getGoods()
-            }
-        })
+            .then(data => {
+                console.log(data)
+                if (data.meta.code == 0) {
+                    this.setData({
+                        navList: data.data.items,
+                        'goods.params.type': data.data.items[0]._id
+                    })
+                    this.getGoods()
+                }
+            })
     },
     getGoods() {
         const goods = this.data.goods
@@ -78,29 +82,29 @@ Page({
 
         // App.HttpService.getGoods(params)
         this.goods.queryAsync(params)
-        .then(data => {
-            console.log(data)
-            if (data.meta.code == 0) {
-                data.data.items.forEach(n => n.thumb_url = App.renderImage(n.images[0] && n.images[0].path))
-                goods.items = [...goods.items, ...data.data.items]
-                goods.paginate = data.data.paginate
-                goods.params.page = data.data.paginate.next
-                goods.params.limit = data.data.paginate.perPage
-                this.setData({
-                    goods: goods,
-                    'prompt.hidden': goods.items.length,
-                })
-            }
-        })
+            .then(data => {
+                console.log(data)
+                if (data.meta.code == 0) {
+                    data.data.items.forEach(n => n.thumb_url = App.renderImage(n.images[0] && n.images[0].path))
+                    goods.items = [...goods.items, ...data.data.items]
+                    goods.paginate = data.data.paginate
+                    goods.params.page = data.data.paginate.next
+                    goods.params.limit = data.data.paginate.perPage
+                    this.setData({
+                        goods: goods,
+                        'prompt.hidden': goods.items.length,
+                    })
+                }
+            })
     },
     onPullDownRefresh() {
         const type = this.data.goods.params.type
         const goods = {
             items: [],
             params: {
-                page : 1,
+                page: 1,
                 limit: 10,
-                type : type,
+                type: type,
             },
             paginate: {}
         }
@@ -124,9 +128,9 @@ Page({
         const goods = {
             items: [],
             params: {
-                page : 1,
+                page: 1,
                 limit: 10,
-                type : type,
+                type: type,
             },
             paginate: {}
         }
