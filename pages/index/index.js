@@ -6,7 +6,7 @@ Page({
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG'},
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1118.JPG'}],
         activeIndex: 0,
-        navList: [],
+        navList: [{_id: 1, name: '常用信息'},{_id: 2, name: '生活周边'},{_id: 1, name: '我的房源'}],
         indicatorDots: !0,
         autoplay: !1,
         current: 0,
@@ -14,12 +14,27 @@ Page({
         duration: 1000,
         circular: !0,
         goods: {
-            items: [],
+            items: [{
+                _id: 1,
+                thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
+                name: 'name',
+                price: 123.00
+            },{
+                _id: 1,
+                thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
+                name: 'namehttps://source.sunzhongmou.com/191054/images/IMG_1117.JPGhttps://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
+                price: 123.00
+            },{
+                _id: 1,
+                thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
+                name: 'name',
+                price: 123.00
+            }],
             params: {
                 page: 1,
                 limit: 10,
             },
-            paginate: {}
+            paginate: {total:10}
         },
         prompt: {
             hidden: !0,

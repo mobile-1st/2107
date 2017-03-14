@@ -15,6 +15,6 @@
 	<view class="logged" wx:else>
 		<image class="logged-icon" src="../../assets/images/iconfont-weixin.png" />
 		<view class="logged-text">近期你已经授权登陆过2107</view>
-		<view class="logged-text">自动登录中</view>
+		<view class="logged-text">自动登录中...</view>
 	</view>
 </view>
