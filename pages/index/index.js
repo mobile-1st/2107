@@ -2,6 +2,11 @@ const App = getApp()
 
 Page({
     data: {
+        grids: [
+            {imageName: 'home_around.png', text: '周边'},
+            {imageName: 'home_life.png', text: '维修'},
+            {imageName: 'home_card.png', text: '卡片'},
+            {imageName: 'home_safe.png', text: '安全'}],
         images: [{'path': 'https://source.sunzhongmou.com/191054/images/IMG_1116.JPG'},
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG'},
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1118.JPG'}],

@@ -3,7 +3,7 @@
 	flex-direction: column;
 	padding: 50rpx 0;
 	align-items: center;
-	background: #479de6;
+	background: #2382D2;
 }
 
 .userinfo-avatar {

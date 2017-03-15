@@ -1,3 +1,25 @@
+.main-func {
+    height: 245rpx;
+	background: #2382D2;
+}
+
+.non-border {
+    border: none;
+}
+
+.item {
+    width: 25%;
+}
+
+.item-avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.item-text {
+    color: #ffffff;
+}
+
 .scroll-list {
     overflow: hidden;
 }
