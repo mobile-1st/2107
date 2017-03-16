@@ -20,6 +20,11 @@
     color: #ffffff;
 }
 
+.house-avatar {
+    width: 100px;
+    height: 80px;
+}
+
 .scroll-list {
     overflow: hidden;
 }

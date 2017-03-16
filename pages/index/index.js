@@ -7,11 +7,14 @@ Page({
             {imageName: 'home_life.png', text: '维修'},
             {imageName: 'home_card.png', text: '卡片'},
             {imageName: 'home_safe.png', text: '安全'}],
+        hotHouse: [
+            {name: '2107. 当代国际花园', description: '南北朝向 - 1室1厅1卫 - 未来域 - 精装温馨现房 - 地铁，公交配套出行方便', avatar: 'https://source.sunzhongmou.com/2107-source/2107_home.png'}
+        ],
         images: [{'path': 'https://source.sunzhongmou.com/191054/images/IMG_1116.JPG'},
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG'},
             {'path': 'https://source.sunzhongmou.com/191054/images/IMG_1118.JPG'}],
         activeIndex: 0,
-        navList: [{_id: 1, name: '常用信息'},{_id: 2, name: '生活周边'},{_id: 1, name: '我的房源'}],
+        navList: [{_id: 1, name: '常用信息'}, {_id: 2, name: '生活周边'}, {_id: 1, name: '我的房源'}],
         indicatorDots: !0,
         autoplay: !1,
         current: 0,
@@ -24,12 +27,12 @@ Page({
                 thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
                 name: 'name',
                 price: 123.00
-            },{
+            }, {
                 _id: 1,
                 thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
                 name: 'namehttps://source.sunzhongmou.com/191054/images/IMG_1117.JPGhttps://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
                 price: 123.00
-            },{
+            }, {
                 _id: 1,
                 thumb_url: 'https://source.sunzhongmou.com/191054/images/IMG_1117.JPG',
                 name: 'name',
@@ -39,7 +42,7 @@ Page({
                 page: 1,
                 limit: 10,
             },
-            paginate: {total:10}
+            paginate: {total: 10}
         },
         prompt: {
             hidden: !0,

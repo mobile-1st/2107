@@ -1,5 +1,4 @@
-<import src="../common/nav.wxml"/>
-<import src="../common/list.wxml"/>
+<import src="../common/hot-house-list.wxml"/>
 
 <view class="page">
     <view  bindtap="bindViewTap" class="main-func">
@@ -15,6 +14,6 @@
 
 
     <view class="page__bd">
-        <template is="list" data="{{ goods, prompt }}"/>
+        <template is="hot-house-list" data="{{ hotHouse }}"/>
     </view>
 </view>
