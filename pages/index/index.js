@@ -3,19 +3,22 @@ const App = getApp()
 Page({
     data: {
         grids: [
-            {path: '../../pages/about/index', imageName: 'home_around.png', text: '家政'},
-            {imageName: 'home_life.png', text: '维修'},
-            {imageName: 'home_card.png', text: '卡片'},
-            {imageName: 'home_safe.png', text: '安全'}],
+            {imageName: 'home_around.png', text: '家政', path:'/pages/service/index'},
+            {imageName: 'home_life.png', text: '维修', path:'/pages/service/index'},
+            {imageName: 'home_card.png', text: '卡片', path:'/pages/service/index'},
+            {imageName: 'home_safe.png', text: '安全', path:'/pages/service/index'}],
         hotHouse: [
             {name: '2107. 当代国际花园', description: '南北朝向 - 1室1厅1卫 - 未来域 - 精装温馨现房 - 地铁，公交配套出行方便', avatar: 'https://source.sunzhongmou.com/2107-source/2107_home.png'}
         ],
-        prompt: {
-            hidden: !0,
+        navData: {
+            house: {
+                name: '吴阿姨',
+                phone: '13545361669',
+                type: '保洁',
+                price: '30-50元/小时',
+                description: '吴阿姨工作认真仔细，价格公道，由经济人推荐，从开始提供服务至今，已经收到不少好评。也欢迎来自您的点评，和我们一起鼓励客户至上的专业服务！'
+            },
         },
-    },
-    swiperchange(e) {
-        console.log(e.detail.current)
     },
     onLoad() {
         this.banner = App.HttpResource('/banner/:id', {id: '@id'})
@@ -26,13 +29,18 @@ Page({
         this.getBanners()
         this.getClassify()
     },
-    bindViewTap(paras) {
-        console.log(paras)
+    getNavData(text) {
+        let result;
+        switch(text){
+            case '家政':
+            result = this.data.navData.house;
+            break;
+        }
+        return result;
     },
     navigateTo(e) {
-        console.log(e)
-        App.WxService.navigateTo('/pages/goods/detail/index', {
-            id: e.currentTarget.dataset.id
+        App.WxService.navigateTo(e.currentTarget.dataset.path, {
+            data: this.getNavData(e.currentTarget.dataset.id)
         })
     },
     search() {
@@ -65,27 +73,6 @@ Page({
                         'goods.params.type': data.data.items[0]._id
                     })
                     this.getGoods()
-                }
-            })
-    },
-    getGoods() {
-        const goods = this.data.goods
-        const params = goods.params
-
-        // App.HttpService.getGoods(params)
-        this.goods.queryAsync(params)
-            .then(data => {
-                console.log(data)
-                if (data.meta.code == 0) {
-                    data.data.items.forEach(n => n.thumb_url = App.renderImage(n.images[0] && n.images[0].path))
-                    goods.items = [...goods.items, ...data.data.items]
-                    goods.paginate = data.data.paginate
-                    goods.params.page = data.data.paginate.next
-                    goods.params.limit = data.data.paginate.perPage
-                    this.setData({
-                        goods: goods,
-                        'prompt.hidden': goods.items.length,
-                    })
                 }
             })
     },

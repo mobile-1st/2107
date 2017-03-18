@@ -3,11 +3,7 @@
     "pages/start/index",
     "pages/index/index",
     "pages/classify/index",
-    "pages/cart/index",
-    "pages/address/list/index",
-    "pages/address/add/index",
-    "pages/address/edit/index",
-    "pages/address/confirm/index",
+    "pages/service/index",
     "pages/order/list/index",
     "pages/order/confirm/index",
     "pages/order/detail/index",
@@ -21,7 +17,7 @@
     "pages/user/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#479de6",
+    "navigationBarBackgroundColor": "#2382D2",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "2107",
     "backgroundColor": "#f8f8f8",

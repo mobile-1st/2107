@@ -1,0 +1,37 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">家政服务</view>
+        <view class="page__desc">服务已由官方认证，如有疑惑，可拨经济人电话进行咨询，请放心使用！</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">服务费用</view>
+                    <view class="weui-form-preview__value_in-hd">{{service.price}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">服务类型</view>
+                    <view class="weui-form-preview__value">{{service.type}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">称呼</view>
+                    <view class="weui-form-preview__value">{{service.name}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">电话</view>
+                    <view class="weui-form-preview__value">{{service.phone}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">介绍</view>
+                    <view class="weui-form-preview__value">{{service.description}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <button bindtap="bindtap" class="weui-btn button-sp-area" type="primary">呼叫</button>
+            </view>
+        </view>
+    </view>
+</view>

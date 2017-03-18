@@ -1,0 +1,8 @@
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+
+.button-sp-area{
+    margin: 15px auto !important;
+    width: 60%;
+}

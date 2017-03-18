@@ -2,38 +2,20 @@ const App = getApp()
 
 Page({
     data: {
-        canEdit: !1,
-        carts: {
-            items: []
-        },
-        prompt: {
-            hidden: !0,
-            icon: '../../assets/images/iconfont-cart-empty.png',
-            title: '购物车空空如也',
-            text: '来挑几件好货吧',
-            buttons: [
-                {
-                    text: '随便逛',
-                    bindtap: 'bindtap',
-                },
-            ],
-        },
+        service: {}
     },
     bindtap: function(e) {
-        const index = e.currentTarget.dataset.index
-        
-        switch(index) {
-            case '0':
-                App.WxService.navigateBack()
-                break
-            default:
-                break
-        }
+        App.WxService.makePhoneCall({
+            phoneNumber: this.data.service.phone
+		})
     },
-    onLoad() {
+    onLoad(options) {
+        this.setData({
+            'service': JSON.parse(options.data)
+        })
     },
     onShow() {
-        this.getCarts()
+        // this.getCarts()
     },
     getCarts() {
         App.HttpService.getCartByUser()
