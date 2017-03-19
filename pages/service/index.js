@@ -2,7 +2,16 @@ const App = getApp()
 
 Page({
     data: {
-        service: {}
+        service: {},
+        navData: {
+            house: {
+                name: '吴阿姨',
+                phone: '13545361669',
+                type: '保洁',
+                price: '30-50元/小时',
+                description: '吴阿姨工作认真仔细，服务至今，已经收到不少好评。热烈欢迎您的点评，和我们一起鼓励客户至上的专业服务！'
+            },
+        }
     },
     bindtap: function(e) {
         App.WxService.makePhoneCall({
@@ -10,8 +19,15 @@ Page({
 		})
     },
     onLoad(options) {
+        let key = ''
+        const id = options.id
+        switch(id){
+            case '0':
+                key = 'house'
+                break;
+        }
         this.setData({
-            'service': JSON.parse(options.data)
+            'service': this.data.navData[key]
         })
     },
     onShow() {

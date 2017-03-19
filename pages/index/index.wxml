@@ -5,7 +5,7 @@
     <view class="main-func">
         <view class="weui-grids non-border">
             <block wx:for-items="{{grids}}" wx:key="{{index}}">
-                <navigator url="" bindtap="navigateTo" class="weui-grid non-border item" data-path="{{ item.path }}" data-id="{{ item.text }}">
+                <navigator url="" bindtap="navigateTo" class="weui-grid non-border item" data-path="{{ item.path }}" data-id="{{ index }}">
                     <image class="weui-grid__icon item-avatar" src="../../assets/images/home/{{item.imageName}}" />
                     <view class="weui-grid__label item-text">{{item.text}}</view>
                 </navigator>

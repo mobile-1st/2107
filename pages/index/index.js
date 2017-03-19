@@ -10,15 +10,6 @@ Page({
         hotHouse: [
             {name: '2107. 当代国际花园', description: '南北朝向 - 1室1厅1卫 - 未来域 - 精装温馨现房 - 地铁，公交配套出行方便', avatar: 'https://source.sunzhongmou.com/2107-source/2107_home.png'}
         ],
-        navData: {
-            house: {
-                name: '吴阿姨',
-                phone: '13545361669',
-                type: '保洁',
-                price: '30-50元/小时',
-                description: '吴阿姨工作认真仔细，价格公道，由经济人推荐，从开始提供服务至今，已经收到不少好评。也欢迎来自您的点评，和我们一起鼓励客户至上的专业服务！'
-            },
-        },
     },
     onLoad() {
         this.banner = App.HttpResource('/banner/:id', {id: '@id'})
@@ -29,18 +20,9 @@ Page({
         this.getBanners()
         this.getClassify()
     },
-    getNavData(text) {
-        let result;
-        switch(text){
-            case '家政':
-            result = this.data.navData.house;
-            break;
-        }
-        return result;
-    },
     navigateTo(e) {
         App.WxService.navigateTo(e.currentTarget.dataset.path, {
-            data: this.getNavData(e.currentTarget.dataset.id)
+            id: e.currentTarget.dataset.id
         })
     },
     search() {
