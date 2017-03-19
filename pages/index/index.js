@@ -10,12 +10,13 @@ Page({
         hotHouse: [
             {name: '2107. 当代国际花园', description: '南北朝向 - 1室1厅1卫 - 未来域 - 精装温馨现房 - 地铁，公交配套出行方便', avatar: 'https://source.sunzhongmou.com/2107-source/2107_home.png'}
         ],
+        assets: {}
     },
     onLoad() {
-        this.banner = App.HttpResource('/banner/:id', {id: '@id'})
+        this.assets = App.HttpResource('/user/get-user-asset/:id', {id: '@id'})
     },
     onShow() {
-        this.getBanners()
+        this.getAssets()
     },
     navigateTo(e) {
         App.WxService.navigateTo(e.currentTarget.dataset.path, {
@@ -25,17 +26,12 @@ Page({
     search() {
         App.WxService.navigateTo('/pages/search/index')
     },
-    getBanners() {
-        // App.HttpService.getBanners({is_show: !0})
-        this.banner.queryAsync({is_show: !0})
+    getAssets() {
+        this.assets.queryAsync({})
             .then(data => {
-                console.log(data)
-                if (data.meta.code == 0) {
-                    data.data.items.forEach(n => n.path = App.renderImage(n.images[0].path))
-                    this.setData({
-                        images: data.data.items
-                    })
-                }
+                this.setData({
+                    assets: data
+                })
             })
     },
     onTapTag(e) {
