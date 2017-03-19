@@ -13,12 +13,9 @@ Page({
     },
     onLoad() {
         this.banner = App.HttpResource('/banner/:id', {id: '@id'})
-        this.goods = App.HttpResource('/goods/:id', {id: '@id'})
-        this.classify = App.HttpResource('/classify/:id', {id: '@id'})
     },
     onShow() {
         this.getBanners()
-        this.getClassify()
     },
     navigateTo(e) {
         App.WxService.navigateTo(e.currentTarget.dataset.path, {
@@ -40,48 +37,6 @@ Page({
                     })
                 }
             })
-    },
-    getClassify() {
-        this.classify.queryAsync({
-            id: 321,
-            page: 1,
-            limit: 4,
-        })
-            .then(data => {
-                console.log(data)
-                if (data.meta.code == 0) {
-                    this.setData({
-                        navList: data.data.items,
-                        'goods.params.type': data.data.items[0]._id
-                    })
-                    this.getGoods()
-                }
-            })
-    },
-    onPullDownRefresh() {
-        const type = this.data.goods.params.type
-        const goods = {
-            items: [],
-            params: {
-                page: 1,
-                limit: 10,
-                type: type,
-            },
-            paginate: {}
-        }
-
-        this.setData({
-            goods: goods
-        })
-
-        this.getGoods()
-    },
-    onReachBottom() {
-        this.lower()
-    },
-    lower() {
-        if (!this.data.goods.paginate.hasNext) return
-        this.getGoods()
     },
     onTapTag(e) {
         const type = e.currentTarget.dataset.type
