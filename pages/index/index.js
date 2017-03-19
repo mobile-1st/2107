@@ -14,42 +14,41 @@ Page({
     },
     onLoad() {
         this.assets = App.HttpResource('/user/get-user-asset/:id', {id: '@id'})
-    },
-    onShow() {
         this.getAssets()
     },
-    navigateTo(e) {
-        App.WxService.navigateTo(e.currentTarget.dataset.path, {
-            id: e.currentTarget.dataset.id
-        })
+    onShow() {
     },
-    search() {
-        App.WxService.navigateTo('/pages/search/index')
+    navigateTo(e) {
+        const id = e.currentTarget.dataset.id
+        if( id == 2 && this.data.assets.contracts.length == 0){
+            this.showWarning()
+            return
+        }
+
+        App.WxService.navigateTo(e.currentTarget.dataset.path, {
+            id: id
+        })
     },
     getAssets() {
         this.assets.queryAsync({})
             .then(data => {
+                console.log(data)
                 this.setData({
                     assets: data
                 })
             })
     },
     onTapTag(e) {
-        const type = e.currentTarget.dataset.type
-        const index = e.currentTarget.dataset.index
-        const goods = {
-            items: [],
-            params: {
-                page: 1,
-                limit: 10,
-                type: type,
-            },
-            paginate: {}
-        }
-        this.setData({
-            activeIndex: index,
-            goods: goods,
-        })
-        this.getGoods()
     },
+    showWarning() {
+        App.WxService.showModal({
+            title: '温馨提示',
+            content: '请进入房源详情页面，由业主邀请认证后，才可以查看相关房源的保密信息！',
+            confirmText: "确认",
+            showCancel: false,
+            success: function (res) {
+                // res.confirm
+            }
+        })
+    }
 })
