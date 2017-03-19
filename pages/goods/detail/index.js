@@ -15,13 +15,14 @@ Page({
         // console.log(e.detail.current)
     },
     onLoad(option) {
-        this.goods = App.HttpResource('/goods/:id', {id: '@id'})
-        this.setData({
-            id: option.id
-        })
+        console.log(option)
+        // this.goods = App.HttpResource('/goods/:id', {id: '@id'})
+        // this.setData({
+        //     id: option.id
+        // })
     },
     onShow() {
-        this.getDetail(this.data.id)
+        // this.getDetail(this.data.id)
     },
     addCart(e) {
         const goods = this.data.goods.item._id

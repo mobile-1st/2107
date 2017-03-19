@@ -3,8 +3,8 @@
     <view class="weui-panel weui-panel_access">
         <view class="weui-panel__hd">热门房源列表</view>
         <view class="weui-panel__bd">
-            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"
-                       wx:for="{{ hotHouse }}" wx:key="" bindtap="navigateTo" data-id="{{ item._id }}">
+            <navigator url="../../pages/goods/detail/index?id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"
+                       wx:for="{{ hotHouse }}" wx:key="">
                 <view class="weui-media-box__hd weui-media-box__hd_in-appmsg house-avatar">
                     <image class="weui-media-box__thumb" src="{{item.avatar}}"/>
                 </view>
