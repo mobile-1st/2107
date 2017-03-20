@@ -8,31 +8,30 @@ Page({
         interval: 3000,
         duration: 1000,
         goods: {
-            item: {}
+            item: {
+                images: [
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_view.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_kitchen.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_sign.png'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_tv.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_fridge.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_air.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_washing.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_cupboard.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_cupboard_2.JPG'},
+                    {path:'https://source.sunzhongmou.com/2107-source/2107_cupboard_3.JPG'}
+                    ],
+                name: '2107',
+                price: '20000.00',
+                remark: 'remark what is that'
+            }
         }
     },
     swiperchange(e) {
-        // console.log(e.detail.current)
     },
     onLoad(option) {
-        console.log(option)
-        // this.goods = App.HttpResource('/goods/:id', {id: '@id'})
-        // this.setData({
-        //     id: option.id
-        // })
     },
     onShow() {
-        // this.getDetail(this.data.id)
-    },
-    addCart(e) {
-        const goods = this.data.goods.item._id
-        App.HttpService.addCartByUser(goods)
-        .then(data => {
-            console.log(data)
-            if (data.meta.code == 0) {
-                this.showToast(data.meta.message)
-            }
-        })
     },
     previewImage(e) {
         const urls = this.data.goods && this.data.goods.item.images.map(n => n.path)
@@ -43,25 +42,5 @@ Page({
             current: current, 
             urls: urls, 
         })
-    },
-    showToast(message) {
-        App.WxService.showToast({
-            title   : message, 
-            icon    : 'success', 
-            duration: 1500, 
-        })
-    },
-    getDetail(id) {
-    	// App.HttpService.getDetail(id)
-        this.goods.getAsync({id: id})
-        .then(data => {
-        	console.log(data)
-        	if (data.meta.code == 0) {
-                data.data.images.forEach(n => n.path = App.renderImage(n.path))
-        		this.setData({
-                    'goods.item': data.data
-                })
-        	}
-        })
-    },
+    }
 })

@@ -13,7 +13,7 @@
         <text class="remark">{{ goods.item.remark }}</text>
     </view>
     <view class="btn-plus" bindtap="addCart">
-        <image class="icon" src="../../assets/images/iconfont-plus-circle.png" />
+        <image class="icon" src="../../../assets/images/iconfont-plus-circle.png" />
         <text>加入购物车</text>
     </view>
 </view>
