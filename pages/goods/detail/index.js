@@ -21,9 +21,9 @@ Page({
                     {path:'https://source.sunzhongmou.com/2107-source/2107_cupboard_2.JPG'},
                     {path:'https://source.sunzhongmou.com/2107-source/2107_cupboard_3.JPG'}
                     ],
-                name: '2107',
-                price: '20000.00',
-                remark: 'remark what is that'
+                name: '2107.当代国际花园.未来域',
+                price: '2100.00元/月 【押一付三】',
+                remark: '住宅 |1室1厅1厨1卫 | 41m² | 21/共34层 | 南 | 精装修'
             }
         }
     },

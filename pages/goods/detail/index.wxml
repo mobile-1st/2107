@@ -12,6 +12,27 @@
         <view class="price">¥ {{ goods.item.price }}</view>
         <text class="remark">{{ goods.item.remark }}</text>
     </view>
+
+    <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">床</view></view>
+        <view class="weui-flex__item"><view class="placeholder">WIFI</view></view>
+        <view class="weui-flex__item"><view class="placeholder">厨房</view></view>
+        <view class="weui-flex__item"><view class="placeholder">热水器</view></view>
+    </view>
+    <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">电视</view></view>
+        <view class="weui-flex__item"><view class="placeholder">洗衣机</view></view>
+        <view class="weui-flex__item"><view class="placeholder">冰箱</view></view>
+        <view class="weui-flex__item"><view class="placeholder">空调</view></view>
+    </view>
+    <view class="weui-flex">
+        <view><view class="placeholder">桌子2张</view></view>
+        <view class="weui-flex__item"><view class="placeholder">柜子3个</view></view>
+        <view><view class="placeholder">凳子5个</view></view>
+    </view>
+
+    <view class="empty"></view>
+
     <view class="btn-plus" bindtap="addCart">
         <image class="icon" src="../../../assets/images/iconfont-plus-circle.png" />
         <text>加入购物车</text>
