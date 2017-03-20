@@ -35,6 +35,6 @@
 
     <view class="btn-plus" bindtap="estateAgent">
         <image class="icon" src="../../../assets/images/iconfont-kefu.png" />
-        <text>御用经济人</text>
+        <text>御用经纪人</text>
     </view>
 </view>
