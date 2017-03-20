@@ -6,7 +6,7 @@ Page({
             {imageName: 'home_around.png', text: '家政', path:'/pages/service/index'},
             {imageName: 'home_life.png', text: '维修', path:'/pages/service/index'},
             {imageName: 'home_card.png', text: '卡片', path:'/pages/service/index'},
-            {imageName: 'home_safe.png', text: '安全', path:'/pages/service/index'}],
+            {imageName: 'home_safe.png', text: '安全', path:'/pages/help/list/index'}],
         hotHouse: [
             {id: 0, type: 'house', name: '2107. 当代国际花园', description: '南北朝向 - 1室1厅1卫 - 未来域 - 精装温馨现房 - 地铁，公交配套出行方便', avatar: 'https://source.sunzhongmou.com/2107-source/2107_home.png'}
         ],
