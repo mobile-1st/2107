@@ -27,7 +27,9 @@ Page({
             }
         }
     },
-    swiperchange(e) {
+    estateAgent(e) {
+        App.WxService.navigateTo('/pages/agent/index', {
+        })
     },
     onLoad(option) {
     },

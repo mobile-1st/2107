@@ -11,7 +11,7 @@
     "pages/goods/detail/index",
     "pages/help/list/index",
     "pages/help/detail/index",
-    "pages/search/index",
+    "pages/agent/index",
     "pages/about/index",
     "pages/login/index",
     "pages/user/index"

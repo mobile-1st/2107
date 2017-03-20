@@ -1,0 +1,34 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">李丹萍</view>
+        <view class="page__desc">小编初识丹萍还是在一位友人的推荐下，在后来买房，出租的过程中，慢慢熟识，从开始的小心翼翼，到后面的全面授权，两月欠余。美梦家园里的美丽丹萍！</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__section">
+                <view class="weui-article__title">本人小结</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        从事房地产行业2年，为人真诚热情，做事认真负责。积累了丰富的谈判经验和较强业务能力。
+                    </view>
+                    <view class="weui-article__p">
+                        由于每个人的需求不同，我不能保证能帮您找到诚心如意的房子。但我能保证，当我能保证，当接到您电话的那一该起，您，就是我的VIP！我将为您提供优质贝的服务，全心全意为您服务。
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="https://source.sunzhongmou.com/2107-source/lidanpin.jpeg" mode="aspectFit" style="width: 300px; height: 569px;" />
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">业务范围</view>
+                    <view class="weui-article__p">
+                        楼盘：当代国际花园，现代森林小镇，万科红郡，万科城市花园，佛奥俊贤雅居，谷尚居，金地艺境。另外，周边也有优质房源
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="btn-plus" bindtap="call">
+        <text>电话咨询</text>
+    </view>
+</view>
