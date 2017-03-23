@@ -1,7 +1,7 @@
 <view class="start">
 	<swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" current="{{ current }}" interval="{{ interval }}" duration="{{ duration }}" circular="{{ circular }}" bindchange="swiperchange">
 	    <swiper-item>
-            <image src="https://source.sunzhongmou.com/2107-source/start_page.png" class="slide-image" bindload="bindload" />
+            <image src="../../assets/images/home/start_page.png" class="slide-image" bindload="bindload" />
         </swiper-item>
 	</swiper>
 </view>

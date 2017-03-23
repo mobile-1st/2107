@@ -2,15 +2,9 @@
   "pages": [
     "pages/start/index",
     "pages/index/index",
-    "pages/classify/index",
     "pages/service/index",
-    "pages/order/list/index",
-    "pages/order/confirm/index",
-    "pages/order/detail/index",
-    "pages/goods/list/index",
     "pages/goods/detail/index",
     "pages/help/list/index",
-    "pages/help/detail/index",
     "pages/agent/index",
     "pages/about/index",
     "pages/login/index",
@@ -41,5 +35,5 @@
       "text": "我的"
     }]
   },
-  "debug": true
+  "debug": false
 }
