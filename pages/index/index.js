@@ -79,6 +79,14 @@ Page({
   },
     onTapTag(e) {
     },
+    redictDetail: function (e) {
+    console.log('我要看详情');
+    var id = e.currentTarget.id,
+        url = '../detail/detail?id=' + id;
+    wx.navigateTo({
+      url: url
+    })
+  },
     showWarning() {
         App.WxService.showModal({
             title: '温馨提示',

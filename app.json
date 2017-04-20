@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/service/index",
     "pages/goods/detail/index",
+    "pages/detail/detail",
     "pages/help/list/index",
     "pages/agent/index",
     "pages/about/index",

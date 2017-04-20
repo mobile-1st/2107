@@ -4,7 +4,7 @@
 
   <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
     <block wx:for="{{postsList}}" wx:key="">
-      <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
+      <view class="posts-item" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
         <view class="author">
           <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
           <view class="author-name">{{item.author.loginname}}</view>
