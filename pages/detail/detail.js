@@ -24,7 +24,7 @@ Page({
 
 this.detailReq.queryAsync({
         "ihakula_request":Config.ihakula_request,
-        "params_string":'{}',
+        "params_string":'{"mdrender":false}',
         "url":"https://bbs.sunzhongmou.com/api/v1/topic/" + id
     })
             .then(res => {
@@ -36,29 +36,8 @@ this.detailReq.queryAsync({
           })
         self.setData({
           detail: res.data,
-          wxParseData: WxParse('md',res.data.content)
+          wxParseData: WxParse('md',res.data.content.replace(/\/public\//g, "https://bbs.sunzhongmou.com/public/"))
         });
         });
-
-    // wx.request({
-    //   url: Api.getTopicByID(id, { mdrender: false }),
-    //   success: function (res) {
-    //     console.log(res);
-    //     res.data.data.create_at = util.getDateDiff(new Date(res.data.data.create_at));
-    //     res.data.data.replies = res.data.data.replies.map(function (item) {
-    //         item.create_at = util.getDateDiff(new Date(item.create_at));
-    //         return item;
-    //       })
-    //     self.setData({
-    //       detail: res.data.data,
-    //       wxParseData: WxParse('md',res.data.data.content)
-    //     });
-    //     setTimeout(function () {
-    //       self.setData({
-    //         hidden: true
-    //       });
-    //     }, 300);
-    //   }
-    // });
   }
 })
