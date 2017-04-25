@@ -1,0 +1,38 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+
+    <view class="weui-cells__title">标题</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input id="title" bindchange="bindTitleChange" class="weui-input" placeholder="请输入标题" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">正文</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea id="content" bindinput="bindContentChange" class="weui-textarea" placeholder="请输入正文" style="height: 5.3em" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">标签</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__bd">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view class="weui-select">{{accounts[accountIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="bindPublish">发布</button>
+    </view>
+  </view>
+</view>

@@ -17,7 +17,7 @@
 
     <view class="page__bd">
         <template is="topic-list" data="{{ postsList }}"/>
-        <!--<template is="hot-house-list" data="{{ hotHouse }}"/>
-        <template is="hot-message-list" data="{{ hotMessage }}"/>-->
+        <template is="hot-house-list" data="{{ hotHouse }}"/>
+        <template is="hot-message-list" data="{{ hotMessage }}"/>
     </view>
 </view>

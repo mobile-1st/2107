@@ -9,7 +9,8 @@
     "pages/agent/index",
     "pages/about/index",
     "pages/login/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/create/create"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2382D2",
@@ -28,11 +29,16 @@
       "pagePath": "pages/index/index",
       "iconPath": "assets/images/iconfont-home.png",
       "selectedIconPath": "assets/images/iconfont-home-active.png",
-      "text": "宇宙中心"
-    }, {
-      "pagePath": "pages/user/index",
+      "text": "首页"
+    },{
+      "pagePath": "pages/create/create",
       "iconPath": "assets/images/iconfont-user.png",
       "selectedIconPath": "assets/images/iconfont-user-active.png",
+      "text": "创造"
+    }, {
+      "pagePath": "pages/user/index",
+      "iconPath": "assets/images/iconfont-discuss.png",
+      "selectedIconPath": "assets/images/iconfont-discuss-active.png",
       "text": "我的"
     }]
   },
