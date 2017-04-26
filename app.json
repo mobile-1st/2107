@@ -10,7 +10,8 @@
     "pages/about/index",
     "pages/login/index",
     "pages/user/index",
-    "pages/create/create"
+    "pages/create/create",
+    "pages/comment/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2382D2",

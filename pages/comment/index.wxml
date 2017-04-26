@@ -1,0 +1,18 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMessage}}</view>
+
+    <view class="empty"/>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea id="content" bindinput="bindContentChange" class="weui-textarea" placeholder="请输入评论" style="height: 8.3em" />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="bindPublish">发布</button>
+    </view>
+  </view>
+</view>

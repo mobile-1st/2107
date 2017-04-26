@@ -1,0 +1,6 @@
+/* pages/create/create.wxss */
+
+.empty {
+    width: 100%;
+    height: 20px;
+}

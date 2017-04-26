@@ -66,6 +66,7 @@
 }
 .detail-post-comment {
   background-color: #fff;
+  margin-bottom: 60px;
 }
 .detail-post-comment-title {
   font-size: 20px;
