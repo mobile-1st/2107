@@ -42,7 +42,7 @@ Page({
     },
     bindComment: function(e) {
         App.WxService.navigateTo('/pages/comment/index', {
-            id: "the-id"
+            id: this.data.detail.id
         })
     }
 })

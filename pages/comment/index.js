@@ -4,19 +4,15 @@ const App = getApp()
 Page({
   data: {
     showTopTips: false,
-
-    accounts: ["中冶创业苑"],
-    accountIndex: 0,
-
-    title: "",
     content: "",
-
     errorMessage: "error Message",
-
-    isAgree: false
+    topicId: ""
   },
   onLoad(option) {
     console.log(option)
+    this.setData({
+      topicId: option.id
+    })
   },
   showTopTips: function(){
     var that = this;
@@ -29,34 +25,15 @@ Page({
       });
     }, 3000);
   },
-  bindTitleChange: function (e) {
-    this.setData({
-      title: e.detail.value
-    });
-  },
   bindContentChange: function (e) {
     this.setData({
       content: e.detail.value
     });
   },
-  bindAccountChange: function(e) {
-    console.log('picker account 发生选择改变，携带值为', e.detail.value);
-
-    this.setData({
-      accountIndex: e.detail.value
-    })
-  },
   bindPublish: function (e) {
-    if (this.data.title === undefined || this.data.title === "") {
-      this.setData({
-        errorMessage: "标题不能为空！"
-      });
-      this.showTopTips()
-      return
-    }
     if (this.data.content === undefined || this.data.content === "") {
       this.setData({
-        errorMessage: "正文不能为空！"
+        errorMessage: "评论不能为空！"
       });
       this.showTopTips()
       return
@@ -66,7 +43,7 @@ Page({
     var self = this;
 
     wx.showToast({
-      title: '文章发布中',
+      title: '评论发布中',
       icon: 'loading',
       duration: 5000
     });
@@ -74,12 +51,10 @@ Page({
     this.posts.saveAsync({
       "ihakula_request": Config.ihakula_request,
       "params_string": JSON.stringify({
-        "tab": "zy",
         "accesstoken": "d1029454-caef-4021-a4bf-3cb8ddc2917e",
-        "title": this.data.title,
         "content": this.data.content
       }),
-      "url": "https://bbs.sunzhongmou.com/api/v1/topics"
+      "url": "https://bbs.sunzhongmou.com/api/v1/topic/" + this.data.topicId + "/replies"
     }).then(res => {
       wx.showToast({
         title: '发布成功',
