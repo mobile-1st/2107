@@ -72,7 +72,7 @@ Page({
       "ihakula_request": Config.ihakula_request,
       "params_string": JSON.stringify({
         "tab": "zy",
-        "accesstoken": "d1029454-caef-4021-a4bf-3cb8ddc2917e",
+        "accesstoken": App.WxService.getStorageSync('accessToken'),
         "title": this.data.title,
         "content": this.data.content
       }),

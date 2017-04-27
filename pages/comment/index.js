@@ -51,7 +51,7 @@ Page({
     this.posts.saveAsync({
       "ihakula_request": Config.ihakula_request,
       "params_string": JSON.stringify({
-        "accesstoken": "d1029454-caef-4021-a4bf-3cb8ddc2917e",
+        "accesstoken": App.WxService.getStorageSync('accessToken'),
         "content": this.data.content
       }),
       "url": "https://bbs.sunzhongmou.com/api/v1/topic/" + this.data.topicId + "/replies"

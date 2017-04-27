@@ -9,7 +9,9 @@ Page({
         duration: 1000,
         circular: !1,
     },
-    onLoad() {},
+    onLoad() {
+        // App.WxService.clearStorage()
+    },
     onShow() {},
     bindload(e) {
     	setTimeout(App.WxService.getStorageSync('token') ? this.goIndex : this.goLogin, 3000)

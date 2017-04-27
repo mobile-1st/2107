@@ -34,7 +34,9 @@ Page({
             success: function (res) {
                 let code = res.code
                 wx.getUserInfo({
+                    withCredentials: true,
                     success: function (res) {
+                        App.WxService.setStorageSync('userName', res.userInfo.nickName)
                         App.HttpService.getToken({
                             app_id: App.Config.appId,
                             code: code,
@@ -48,6 +50,9 @@ Page({
                                     this.showModal()
                                 }
                             })
+                    },
+                    fail: function(res){
+                        console.log(res)
                     }
                 })
             }

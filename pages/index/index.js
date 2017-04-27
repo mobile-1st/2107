@@ -24,6 +24,7 @@ Page({
         // this.getAssets()
         this.posts = App.HttpResource('/bbs/event/get/:id', {id: '@id'})
         this.fetchData()
+        this.getAccessToken()
     },
     onShow() {
     },
@@ -50,6 +51,18 @@ Page({
                     assets: data
                 })
             })
+    },
+    getAccessToken: function(){
+        if (App.WxService.getStorageSync('accessToken')) return
+        let userName = App.WxService.getStorageSync('userName')
+        this.posts.queryAsync({
+        "ihakula_request":Config.ihakula_request,
+        "params_string":'{"tab":"zy"}',
+        "url":"https://bbs.sunzhongmou.com/api/v1/user/accesstoken/" + userName 
+    })
+        .then(res => {
+            App.WxService.setStorageSync('accessToken', res.data)
+        })
     },
     fetchData: function () {
     var self = this;
