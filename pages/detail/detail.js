@@ -36,9 +36,9 @@ Page({
                 })
                 self.setData({
                     detail: res.data,
-                    wxParseData: WxParse('md', res.data.content.replace(/\/public\//g, "https://bbs.sunzhongmou.com/public/"))
+                    wxParseData: WxParse('md', res.data.content.replace(/\/public\//g, "https://bbs.sunzhongmou.com/public/").replace(/http:/g, "https:"))
                 })
-                console.log(self.data)
+                console.log(self.data.wxParseData)
             });
     },
     bindComment: function(e) {
