@@ -1,7 +1,6 @@
 
 .right_cell{
     background-color: white;
-    height: 130rpx;
     border-bottom: 1rpx solid #f1f1f1;
     overflow: hidden;
 }
@@ -23,7 +22,6 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    width: 55%;
     margin-left: 5rpx;
 }
 
@@ -33,24 +31,25 @@
 }
 
 .content .name {
-    font-size: 30rpx;
+    font-size: 40rpx;
     color: #333333;
     line-height: 60rpx;
     margin-top: 13rpx;
 }
 .content .fans {
     color: #818181;
-    font-size: 22rpx;
+    font-size: 30rpx;
     line-height: 80rpx;
 }
 
 .right_cell button{
-    display: inline-block;
-    width: 23%;
-    font-size: 24rpx;
-    color: #e42e16;
-    height: 50rpx;
-    margin-right: 5rpx;
-    vertical-align: middle;
-    line-height: 50rpx;
+    display:inline-block;
+    width:23%;
+    font-size:32rpx;
+    color:#e42e16;
+    height:60rpx;
+    margin:10px 10px;
+    vertical-align:middle;
+    line-height:60rpx;
+    float:right;
 }

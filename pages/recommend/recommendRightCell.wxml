@@ -2,16 +2,13 @@
 <template name="recommendRightCell" >
 
     <view class="right_cell">
-        <view class="avatar">
-            <image src="{{item.header}}" mode="aspectFit"></image>
-        </view>
 
         <view class="content">
-            <text class="name">{{item.screen_name}}</text>
-            <text class="fans">{{item.fans_count}}人关注</text>
+            <text class="fans">{{item.title}}</text>
+            <text class="name">{{item.content}}</text>
         </view>
 
-        <button>+关注</button>
+        <button data-phone="{{item.content}}" bindtap="btn_clicked" wx:if="{{ item.title === '电话' }}">呼叫</button>
 
     </view>
 
