@@ -13,8 +13,8 @@
   margin: 0;
   padding: 0;
   font-weight: 400;
-  font-size: 29px;
-  color: #80bd01;
+  font-size: 23px;
+  color: #000;
 }
 .detail-post-meta {
   position: relative;
