@@ -6,10 +6,18 @@ const App = getApp()
 Page({
     data: {
         grids: [
-            {imageName: 'home_around.png', text: '物业', path: '/pages/service/index'},
-            {imageName: 'home_life.png', text: '淘邻', path: '/pages/mall/index'},
-            {imageName: 'home_card.png', text: '黄页', path: '/pages/service/index'},
-            {imageName: 'home_safe.png', text: '安全', path: '/pages/safe/index'}],
+            {imageName: 'home_around.png',
+                text: '物业',
+                path: '/pages/service/index'},
+            {imageName: 'home_life.png',
+                text: '淘邻',
+                path: '/pages/mall/index'},
+            {imageName: 'home_card.png',
+                text: '黄页',
+                path: '/pages/service/index'},
+            {imageName: 'home_safe.png',
+                text: '安全',
+                path: '/pages/safe/index'}],
         postsList: [],
         hidden: false,
         page: 1,
@@ -33,21 +41,6 @@ Page({
     },
     onReachBottom() {
         this.fetchData()
-    },
-    navigateTo(e) {
-        const type = e.currentTarget.dataset.type
-        if (type === 'house') {
-        } else {
-            const id = e.currentTarget.dataset.id
-            if (id == 2 && this.data.assets.contracts.length == 0) {
-                this.showWarning()
-                return
-            }
-
-            App.WxService.navigateTo(e.currentTarget.dataset.path, {
-                id: id
-            })
-        }
     },
     getAssets() {
         this.assets.queryAsync({})
@@ -97,16 +90,6 @@ Page({
                 })),
                 page: (self.data.page + 1)
             })
-        })
-    },
-    onTapTag(e) {
-    },
-    redictDetail: function (e) {
-        console.log('我要看详情');
-        var id = e.currentTarget.id,
-            url = '../detail/detail?id=' + id;
-        wx.navigateTo({
-            url: url
         })
     },
     showWarning() {
