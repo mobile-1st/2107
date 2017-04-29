@@ -1,5 +1,3 @@
-<import src="../common/hot-house-list.wxml"/>
-<import src="../common/hot-message-list.wxml"/>
 <import src="../common/topic-list.wxml"/>
 
 <view class="page">
@@ -17,7 +15,5 @@
 
     <view class="page__bd">
         <template is="topic-list" data="{{ postsList }}"/>
-        <template is="hot-house-list" data="{{ hotHouse }}"/>
-        <template is="hot-message-list" data="{{ hotMessage }}"/>
     </view>
 </view>

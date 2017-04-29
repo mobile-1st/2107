@@ -1,0 +1,11 @@
+<import src="../common/hot-house-list.wxml"/>
+<import src="../common/hot-message-list.wxml"/>
+
+
+<view class="page">
+
+    <view class="page__bd">
+        <template is="hot-house-list" data="{{ hotHouse }}"/>
+        <template is="hot-message-list" data="{{ hotMessage }}"/>
+    </view>
+</view>
