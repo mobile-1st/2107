@@ -102,5 +102,15 @@ Page({
                 // res.confirm
             }
         })
+    },
+    onShareAppMessage: function () {
+        return {
+            title: '中冶创业苑 - 畅居',
+            path: '/pages/index/index',
+            success: function(res) {
+            },
+            fail: function(res) {
+            }
+        }
     }
 })

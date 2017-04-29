@@ -4,16 +4,31 @@
         <view class="weui-cells__title">详细地址</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
-                <view class="weui-cell__bd">当代国际花园未来域2107</view>
+                <view class="weui-cell__bd">中冶创业苑.光谷大道与高新六路交叉口(光谷金融港南侧)</view>
             </view>
         </view>
 
-        <view class="weui-cells__title">注意事项</view>
+        <view class="weui-cells__title">江厦区公安局藏龙岛派出所 - 凤凰花园责任区民警联系卡</view>
         <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">查看业主户口本，房产证，身份证原件</view>
-            </view>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo">
+                <view class="weui-cell__bd">{{ item.text }}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">
+                    <text>{{ item.path }}</text>
+                </view>
+            </navigator>
         </view>
+
+        <view class="weui-cells__title">楼栋分布</view>
+        <view class="weui-article__p">
+            <image class="weui-article__img" src="https://source.sunzhongmou.com/2107-source/zhongye/map.png" mode="aspectFit" style="height: 253px" />
+        </view>
+
+        <view class="weui-cells__title">民警信息</view>
+        <view class="weui-article__p">
+            <image class="weui-article__img" src="https://source.sunzhongmou.com/2107-source/zhongye/police.png" mode="aspectFit" style="height: 435px" />
+        </view>
+
+        <view class="weui-cells__title">提示信息</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">离房时请关闭所有电器设备和水龙头</view>
