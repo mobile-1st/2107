@@ -102,6 +102,16 @@ Page({
     App.WxService.makePhoneCall({
       phoneNumber: e.target.dataset.phone
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '中冶创业苑 - 畅居',
+      path: '/pages/recommend/recommend',
+      success: function(res) {
+      },
+      fail: function(res) {
+      }
+    }
   }
 
 })
