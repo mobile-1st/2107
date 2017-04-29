@@ -37,7 +37,8 @@ Page({
                 self.setData({
                     detail: res.data,
                     wxParseData: WxParse('md', res.data.content.replace(/\/public\//g, "https://bbs.sunzhongmou.com/public/"))
-                });
+                })
+                console.log(self.data)
             });
     },
     bindComment: function(e) {

@@ -120,7 +120,7 @@
         <!--img类型-->
         <block wx:elif="{{item.tag == 'img'}}">
             <view class="wxParse-{{item.tag}}">                 
-                <image src="{{item.attr.src}}" mode="aspectFit"></image>             
+                <image src="{{item.attr.src}}" mode="aspectFit" style="width: 284px"></image>
             </view>
         </block>
 
