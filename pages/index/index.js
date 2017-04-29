@@ -14,7 +14,7 @@ Page({
                 path: '/pages/mall/index'},
             {imageName: 'home_card.png',
                 text: '黄页',
-                path: '/pages/service/index'},
+                path: '/pages/recommend/recommend'},
             {imageName: 'home_safe.png',
                 text: '安全',
                 path: '/pages/safe/index'}],
