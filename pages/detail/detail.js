@@ -10,13 +10,17 @@ Page({
         title: '话题详情',
         detail: {},
         hidden: false,
-        wxParseData: []
+        wxParseData: [],
+        topicId: ""
     },
     onLoad: function (options) {
         this.detailReq = App.HttpResource('/bbs/event/get/:id', {id: '@id'})
-        this.fetchData(options.id);
+        this.setData({
+            topicId: options.id
+        })
+        this.fetchData();
     },
-    fetchData: function (id) {
+    fetchData: function () {
         var self = this;
         self.setData({
             hidden: false
@@ -25,7 +29,7 @@ Page({
         this.detailReq.queryAsync({
             "ihakula_request": Config.ihakula_request,
             "params_string": '{"mdrender":false}',
-            "url": "https://bbs.sunzhongmou.com/api/v1/topic/" + id
+            "url": "https://bbs.sunzhongmou.com/api/v1/topic/" + this.data.topicId
         })
             .then(res => {
                 console.log(res);
@@ -45,5 +49,12 @@ Page({
         App.WxService.navigateTo('/pages/comment/index', {
             id: this.data.detail.id
         })
-    }
+    },
+    onPullDownRefresh() {
+        console.info('onPullDownRefresh')
+        this.fetchData()
+    },
+    onReachBottom() {
+        this.fetchData()
+    },
 })
