@@ -1,37 +1,33 @@
 <view class="page">
-    <view class="page__hd">
-        <view class="page__title">{{service.title}}</view>
-        <view class="page__desc">服务已由官方认证，如有疑惑，可拨经纪人电话进行咨询，请放心使用！</view>
-    </view>
+
     <view class="page__bd">
-        <view class="weui-form-preview">
-            <view class="weui-form-preview__hd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">服务费用</view>
-                    <view class="weui-form-preview__value_in-hd">{{service.price}}</view>
-                </view>
-            </view>
-            <view class="weui-form-preview__bd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">服务类型</view>
-                    <view class="weui-form-preview__value">{{service.type}}</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">称呼</view>
-                    <view class="weui-form-preview__value">{{service.name}}</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">电话</view>
-                    <view class="weui-form-preview__value">{{service.phone}}</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">介绍</view>
-                    <view class="weui-form-preview__value">{{service.description}}</view>
-                </view>
-            </view>
-            <view class="weui-form-preview__ft">
-                <button bindtap="bindtap" class="weui-btn button-sp-area" type="primary">呼叫</button>
+        <view class="weui-cells__title">物业办公地址</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">10栋前、小区东门进，左拐左手旁</view>
             </view>
         </view>
+
+        <view class="weui-cells__title">物业相关联系电话</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo">
+                <view class="weui-cell__bd">{{ item.text }}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">
+                    <text>{{ item.path }}</text>
+                </view>
+            </navigator>
+        </view>
+
+        <view class="weui-cells__title">物业服务收费价格</view>
+        <view class="weui-article__p">
+            <image class="weui-article__img" src="https://source.sunzhongmou.com/2107-source/zhongye/price.png" mode="aspectFit" style="height: 503px" />
+        </view>
+
+        <view class="weui-cells__title">物业服务管理人员</view>
+        <view class="weui-article__p">
+            <image class="weui-article__img" src="https://source.sunzhongmou.com/2107-source/zhongye/manager.png" mode="aspectFit" style="height: 503px" />
+        </view>
+
+
     </view>
 </view>
