@@ -78,11 +78,20 @@ Page({
       }),
       "url": "https://bbs.sunzhongmou.com/api/v1/topics"
     }).then(res => {
-      wx.showToast({
-        title: '发布成功',
-        icon: 'success',
-        duration: 5000
-      });
+      if(res.error){
+        wx.showToast({
+          title: '发布失败!',
+          icon: 'warn',
+          duration: 3000
+        })
+
+      } else {
+        wx.showToast({
+          title: '发布成功',
+          icon: 'success',
+          duration: 3000
+        })
+      }
     })
   }
 
