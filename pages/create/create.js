@@ -81,9 +81,9 @@ Page({
       wx.showToast({
         title: '发布成功',
         icon: 'success',
-        duration: 3000
+        duration: 5000
       });
     })
-
   }
+
 });

@@ -67,4 +67,14 @@ Page({
     onReachBottom() {
         this.fetchData()
     },
+  onShareAppMessage: function () {
+        return {
+            title: '中冶创业苑 - 畅居',
+            path: '/pages/detail/index?id=' + this.data.topicId,
+            success: function(res) {
+            },
+            fail: function(res) {
+            }
+        }
+    }
 })

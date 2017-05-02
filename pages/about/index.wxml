@@ -1,7 +1,7 @@
 <view class="about">
 	<view class="about-item">
 		<text class="about-item-title">关于我们</text>
-		<text class="about-item-content">我们致力于让租客省心，业主放心。构建美好居住环境，让家更温馨！</text>
+		<text class="about-item-content">我们致力于让小区实现信息化。构建美好居住环境，和促进邻里关系，让家更温馨！</text>
 	</view>
 	<view class="about-item">
 		<text class="about-item-title">官网</text>
