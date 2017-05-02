@@ -1,16 +1,31 @@
-<view class="about">
-	<view class="about-item">
-		<text class="about-item-title">关于我们</text>
-		<text class="about-item-content">我们致力于让小区实现信息化。构建美好居住环境，和促进邻里关系，让家更温馨！</text>
-	</view>
-	<view class="about-item">
-		<text class="about-item-title">官网</text>
-		<text class="about-item-content link">http://www.sunzhongmou.com/</text>
-		<text class="about-item-title">博客</text>
-		<text class="about-item-content link">http://blog.sunzhongmou.com/</text>
-	</view>
-	<view class="about-item">
-		<text class="about-item-title">当前版本</text>
-		<text class="about-item-content ">v0.1.0 Beta</text>
-	</view>
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">关于我们</view>
+        <view class="page__desc">我们致力于让小区实现信息化。构建美好居住环境，和促进邻里关系，让家更温馨！ - 《畅居》</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">仲谋科技</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">官网</view>
+                    <view class="weui-article__p link">
+                        http://www.sunzhongmou.com/
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">博客</view>
+                    <view class="weui-article__p link">
+                        http://blog.sunzhongmou.com/
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">当前版本</view>
+                    <view class="weui-article__p">
+                        v1.4.0
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
